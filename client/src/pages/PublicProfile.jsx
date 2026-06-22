@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { GitBranch, Globe, Link as LinkIcon } from "lucide-react";
+import { Globe, Link as LinkIcon } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import api from "../lib/axios";
 
 const PublicProfile = () => {
@@ -38,7 +39,7 @@ const PublicProfile = () => {
     const lower = title?.toLowerCase();
 
     if (lower.includes("github")) {
-      return <Github size={20} />;
+      return <FaGithub size={20} />;
     }
 
     return <Globe size={20} />;
